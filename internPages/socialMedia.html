@@ -67,6 +67,14 @@ fetch('./headerInside/headerInside.html')
         });
       });
     }
+
+    const closeMenu = document.getElementById('closeMenu');
+      if (closeMenu) {
+        closeMenu.addEventListener('click', () => {
+         mobileMenu.classList.remove('open');
+    });
+}
+
   })
   .catch(error => console.error('Error loading header:', error));
 </script>

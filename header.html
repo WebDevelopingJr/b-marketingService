@@ -12,6 +12,7 @@
 
   <!-- Mobile Menu -->
   <div class="mobileMenu" id="mobileMenu">
+    <span class="closeMenu" id="closeMenu">&times;</span>
     <ul>
       <li><a href="/">Homepage</a></li>
       <li><a href="whoweare.html">Who we are</a></li>
@@ -117,7 +118,21 @@ header {
   right: 0;
 }
 
+.closeMenu {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 36px;
+  cursor: pointer;
+  color: #111;
+  z-index: 1000;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
 
+.closeMenu:hover {
+  color: #c7511f;
+}
 
 @keyframes entryAnimation {
     0% {
