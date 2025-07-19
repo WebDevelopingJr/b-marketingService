@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+}
+main {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F97245;
+}
+.textC {
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+/* Content info */
+
+/* Reset y fuente base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fc;
+}
+
+/* Contenedor principal */
+.contentInfo {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+/* Contenedor interno */
+.contentInfoContainer {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 30px;
+}
+
+/* Columna izquierda: Información */
+.information {
+    height: 860px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.information h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.information p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Diferenciador */
+.difference {
+    background-color: #f0f4ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border-left: 4px solid #667EEA;
+}
+
+.difference h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.difference ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #444;
+    font-size: 16px;
+}
+
+/* Columna derecha: Servicios */
+.servicesGeneral {
+    border-radius: 12px;
+    padding: 0px;
+    width: 330px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.serviceGeneralContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 26px;
+    box-shadow: 0px 0px 8px 2px #cccccc;
+    border-radius: 10px;
+    position: sticky;
+    top: 185px;
+}
+
+.services {
+    background-color: #f0f4f8;
+    border-radius: 6px;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.services:hover {
+    background-color: #dce4ef;
+}
+
+.services p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+
+/* ==========================
+   Animaciones y efectos
+========================== */
+
+/* Fade in + slide abajo */
+.animate-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación en el título de servicios */
+.textC h1 {
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 5px #ffffff66, 0 0 10px #fff, 0 0 20px #ff8844;
+  }
+  to {
+    text-shadow: 0 0 10px #fff2e0, 0 0 20px #F97245, 0 0 40px #ff5000;
+  }
+}
+
+/* Hover con movimiento y sombra */
+.services {
+  background-color: #f0f4f8;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.services:hover {
+  background-color: #dce4ef;
+  transform: scale(1.05) translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto sutil en .information */
+.information {
+  transition: transform 0.3s ease;
+}
+
+.information:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive animaciones */
+@media (max-width: 900px) {
+  .animate-in {
+    transform: translateY(50px);
+  }
+}
+
+
+
+/* ---------------------
+   Responsive Design
+------------------------ */
+@media (max-width: 900px) {
+    .contentInfoContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicesGeneral {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 30px;
+    }
+
+    .information {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .information {
+        padding: 25px 20px;
+    }
+
+    .services p,
+    .difference ul,
+    .information p {
+        font-size: 13px;
+    }
+
+    .information h1 {
+        font-size: 20px;
+    }
+
+    .difference h3 {
+        font-size: 15px;
+    }
+}

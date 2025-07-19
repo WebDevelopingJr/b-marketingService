@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="socialMedia.css">
+    <title>Document</title>
+</head>
+<header></header>
+<main>
+    <div class="textC">
+        <h1>Our Premium Services</h1>
+        <p>Where innovation meets execution. We turn your digital challenges into beautiful, profitable solutions through cutting-edge strategies and flawless implementation.</p>
+    </div>
+</main>
+<body>
+    <div class="contentInfo">
+        <div class="contentInfoContainer">
+            <div class="information">
+                <h1>Social Media Marketing</h1>
+                <p>Social media gives your brand a chance to join the conversation and an opportunity to drive conversions. So you can turn casual fans and complete strangers into paying customers and brand advocates.</p>
+                <p>Social media is about people. Platforms can change, however the key goal of social media marketing is consistent: connect with and interact with other human beings like real people. It's about sharing relevant information, making them feel good about following your company, making sure people remember you, or teaching people about a product that can improve their lives.</p>
+                <p>Unquestionably, it is not done in the blink of an eye. Growing a dedicated community of followers isn't just a job for a random intern or office worker. Would you like them to speak on behalf of your company to the media? Effective social media marketing is about much more than content; is interacting with your community, sharing content of interest, and ensuring that you are a resource to them.</p>
+                <p>In the beginning, social media marketing just meant having a Facebook page and occasionally posting a link to your website. Today, it's about reaching your target audience where they are, with the right tone and the right balance of content.</p>
+                <div class="difference">
+                    <h3>What Make Us Different</h3>
+                    <ul>
+                        <li>Tailored to Your Brand </li>
+                        <li>Specific to Each Platform</li>
+                        <li>Built for a Sustained Social Presence</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="servicesGeneral">
+                <div class="serviceGeneralContainer">
+                    <h3>Our Services</h3>
+                    <div class="services"><p>Social Media</p></div>
+                    <div class="services"><p>Digital Marketing</p></div>
+                    <div class="services"><p>SEO</p></div>
+                    <div class="services"><p>Video Advertising</p></div>
+                    <div class="services"><p>Web Design</p></div>
+                    <div class="services"><p>Web Hosting</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<div class="footerItemsComplete"></div>
+<script>
+fetch('./headerInside/headerInside.html')
+  .then(response => response.text())
+  .then(data => {
+    document.querySelector('header').innerHTML = data;
+
+    // ✅ Esperamos a que el header esté dentro del DOM
+    const menuIcon = document.querySelector('.iconMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuIcon && mobileMenu) {
+      menuIcon.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+      });
+
+      document.querySelectorAll('.mobileMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+        });
+      });
+    }
+  })
+  .catch(error => console.error('Error loading header:', error));
+</script>
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 0) {
+      header.classList.add("headerScrolled");
+      document.querySelector('.imageHeader').src = '/logo-BMS-new.png'
+    } else {
+      header.classList.remove("headerScrolled");
+      document.querySelector('.imageHeader').src = '/logo-BMS-bco.png'
+    }
+  });
+</script>
+
+
+<script>
+    fetch('./footerInside/footerinside.html')
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector('.footerItemsComplete').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading header:', error));
+</script>
+</html>
