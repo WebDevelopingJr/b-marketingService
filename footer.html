@@ -1,0 +1,237 @@
+    <div class="bannerPage">
+        <div class="bannerContainer">
+            <h1>¿Listo para crecer?</h1>
+            <p>Contáctanos y transforma tu presencia digital.</p>
+            <a href="/contactus.html"><button>Solicitar asesoría</button></a>
+        </div>
+    </div>
+<footer>
+    <div class="footerContainer">
+        <div class="containerItems">
+            <img src="https://marketingbms.com/images/logo-white.png" alt="icon-Footer">
+            <h4>Contact Us</h4>
+            <p>jbonilla@marketingbms.com</p>
+            <p>+1 (786) 516-4220</p>
+        </div>
+        <div class="containerItems">
+            <h4>About</h4>
+            <p>The ultimate goal of digital marketing is not only to drive traffic, but to convert that traffic into a sale, lead, or desired action.</p>
+        </div>
+        <div class="containerItems">
+            <h4>Our content</h4>
+            <ul>
+                <li><a href="#">Homepage</a></li>
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="containerItems">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">FAQ’s</a></li>
+                <li><a href="#">Badges</a></li>
+            </ul>
+        </div>
+        <div class="containerItems">
+            <h4>Connect with us Socially</h4>
+            <div class="iconsContentItems">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="partnersContainer">
+        <p>Copyright 2025. B Marketing Services LLC, All rights reserved.</p>
+        <p>Design and Implementation by Web & Business</p>
+    </div>
+</footer>
+    <style>
+/* Banner */
+
+.bannerPage {
+    width: 100%;
+    height: 550px;
+    background-image: url(https://marketingbms.com/images/call-to-action/call-to-action-bg-2.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+.bannerContainer {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bannerContainer h1 {
+    font-size: 40px;
+}
+.bannerContainer h1 {
+  font-size: 40px;
+  color: #ff6a00;
+  text-shadow:
+    0 0 5px #ff6a00,
+    0 0 15px #ff6a00,
+    0 0 30px #ff6a00,
+    0 0 45px #ff6a00;
+  animation: neonPulse 3s ease-in-out infinite;
+}
+.bannerContainer p {
+    font-size: 20px;
+}
+.bannerContainer button {
+  position: relative;
+  background-color: #c7511f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 36px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 12px #c7511fcc;
+  animation: glowPulse 3s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bannerContainer button:hover {
+  background-color: #a63f13;
+  transform: scale(1.1);
+  box-shadow: 0 0 40px #ffa233dd, 0 0 70px #ffb65edd;
+}
+
+footer {
+    width: 100%;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #272727;
+    color: #fff;
+    padding-top: 75px;
+}
+.footerContainer {
+    width: 100%;
+    max-width: 1800px;
+    display: flex;
+    justify-content: space-around;
+}
+.containerItems {
+    width: 230px;
+}
+.containerItems h4 {
+    color: #a63f13;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.containerItems p {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal; 
+}
+.containerItems ul {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    padding: 0;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.containerItems ul a {
+    text-decoration: none;
+    color: #fff;
+}
+.partnersContainer {
+    width: 100%;
+    display: flex;
+    background-color: #151515;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0 0px 0;
+}
+.partnersContainer p {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 5px #ff6a00,
+      0 0 15px #ff6a00,
+      0 0 30px #ff6a00,
+      0 0 45px #ff6a00;
+    color: #ff6a00;
+  }
+  50% {
+    text-shadow:
+      0 0 20px #ff8a00,
+      0 0 35px #ff8a00,
+      0 0 50px #ff8a00,
+      0 0 60px #ff8a00;
+    color: #ffa233;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 8px #c7511fcc, 0 0 20px #ff6a00cc;
+  }
+  50% {
+    box-shadow: 0 0 18px #ff6a00cc, 0 0 40px #ffa233cc;
+  }
+}
+
+
+@media (max-width: 1160px) {
+    footer {
+    height: auto;
+}
+.footerContainer {
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 0 0 0 30px;
+}
+.partnersContainer {
+    text-align: center;
+}
+.bannerContainer {
+    width: 90%;
+    text-align: center;
+}
+.bannerContainer h1 {
+    font-size: 30px;
+}
+.bannerContainer p {
+    font-size: 15px;
+}
+.bannerContainer button {
+    font-size: 15px;
+}
+}
+    </style>
+    

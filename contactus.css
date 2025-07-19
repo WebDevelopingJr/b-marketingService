@@ -1,0 +1,311 @@
+body {
+    margin: 0;
+}
+main {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F97245;
+}
+.textC {
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+
+
+.textC h1, .textC p {
+  opacity: 0;
+  transform: translateY(30px);
+  animation-fill-mode: forwards;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+}
+
+.textC h1 {
+  animation-name: fadeSlideUp;
+  animation-delay: 0.3s;
+}
+
+.textC p {
+  animation-name: fadeSlideUp;
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.contactus {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 130px;
+}
+.contactusContainer {
+    width: 100%;
+    max-width: 1110px;
+    display: flex;
+    gap: 50px;
+      opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.contactusContainer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.getInTouch {
+    width: 390px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 4px #b2b2b2cc;
+}
+.getInTouch h1 {
+    color: #d04d1f;
+}
+.sociallol {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    background: #F7F7F7;
+    border-radius: 20px;
+    padding: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.sociallol:hover {
+  box-shadow: 0 8px 20px rgba(240, 132, 56, 0.5);
+  transform: scale(1.05);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  background-color: #fff3e6;
+  box-shadow: 0 0 8px #f97245;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.sociallol a {
+    text-decoration: none;
+    color: #333;
+}
+.sociallol a:hover {
+    color: #d04d1f;
+}
+.sociallol img {
+    width: 25px;
+    height: 25px;
+    margin-top: 15px;
+    background: #EF8B60;
+    padding: 10px;
+    border-radius: 20px;
+}
+.socialMedias {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+    .contactUsForm {
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0px 0px 20px 4px #b2b2b2cc;
+      width: 510px;
+      max-width: 90%;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 35px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-size: 18px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      padding: 15px 10px;
+      border: none;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      font-size: 17px;
+      resize: none;
+    }
+
+    select {
+      cursor: pointer;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    .btn-submit {
+      background-color: #f15a24;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-submit:hover {
+      background-color: #d04d1f;
+      transition: background-color 0.3s ease;
+    }
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-effect 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+.frequentlyQuestions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 110px;
+  margin-bottom: 110px;
+}
+.frequentlyQuesContainer {
+  width: 90%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  box-shadow: 0 0 20px 0px #d6d6d6;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.contenedorQuestions {
+  width: 90%;
+  padding: 30px;
+}
+.question {
+  width: 98%;
+  height: 50px;
+  padding: 20px 0px 20px 20px;
+  background-color: #FCF6F4;
+  overflow: hidden;
+  margin: 20px 0 20px 0;
+  border-radius: 20px;
+  transition: 0.2s linear;
+  interpolate-size: allow-keywords;
+}
+.question:hover {
+  height: auto;
+}
+.question div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.question div img {
+  width: 25px;
+  height: fit-content;
+  transform: translate(-30px, 0);
+  transition: 0.5s;
+}
+.question:hover div img {
+  transform: translate(0px, 30px);
+  rotate: 90deg;
+  transition: 0.5s;
+}
+.question h3 {
+  font-weight: 300;
+}
+.answer {
+  margin-top: 20px;
+}
+
+@media (max-width: 1110px) {
+  .contactusContainer {
+    flex-direction: column;
+    align-items: center;
+}
+    .getInTouch {
+        width: 80%;
+        padding: 30px;
+    }
+    .contactUsForm {
+        width: 70%;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 524px) {
+  .form-row {
+    flex-direction: column;
+}
+.getInTouch {
+    height: auto;
+}
+}
+@media (max-width: 400px) {
+  .question h3 {
+    font-size: 12px;
+}
+.sociallol {
+    height: auto;
+    display: flex
+;
+    flex-direction: column;
+}
+}

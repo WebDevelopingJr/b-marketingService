@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="whoware.css">
+    <title>Document</title>
+</head>
+<body>
+<header></header>
+<main>
+    <div class="mainContainer">
+        
+    <div class="textPartContainer">
+        <h1>We transform mistakes into digital beauty Dedicated exclusively to your digital success</h1>
+        <p>We believe that the best results come from bold experimentation and continuous improvement. Every "mistake" is an opportunity to create something extraordinary.</p>
+    </div>
+    <div class="imgPartContainer">
+        <img src="whowareimg.png" alt="whoware">
+    </div>
+
+    </div>
+</main>
+<div class="howrwediff">
+    <div class="howrwediffContainer">
+        <h1>How are we different</h1>
+        <div class="itemsHowrwe">
+            <div class="howrweItem">
+                <img src="icons-bms/icon-4.svg" alt="iconHowrwe">
+                <h3>Experimental Design</h3>
+                <p>We explore uncharted design territory, where each "mistake" leads to more creative and effective solutions.</p>
+            </div>
+            <div class="howrweItem">
+                <img src="icons-bms/icon-4.svg" alt="iconHowrwe" style="background-color: #F3AAFA">
+                <h3>Experimental Design</h3>
+                <p>We explore uncharted design territory, where each "mistake" leads to more creative and effective solutions.</p>
+            </div>
+            <div class="howrweItem">
+                <img src="icons-bms/icon-4.svg" alt="iconHowrwe" style="background-color: #89EDAC">
+                <h3>Experimental Design</h3>
+                <p>We explore uncharted design territory, where each "mistake" leads to more creative and effective solutions.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="whypartner">
+    <div class="whypartnerContainer">
+        <div class="leftPartner">
+        <h1 class="colorTextOrange">Why partner with us?</h1>
+        <p>We believe perfection comes from imperfection. Our unique approach transforms every challenge into growth and every mistake into a valuable lesson.</p>
+        <p>We’re not afraid of mistakes — we embrace them as part of the creative process that leads to extraordinary results</p>
+        <div class="containersInfo">
+            <div class="spamtainer">
+                <p class="colorTextOrange">+30</p>
+                <p>Years of Experience</p>
+            </div>
+            <div class="spamtainer">
+                <p class="colorTextOrange">+30</p>
+                <p>Years of Experience</p>
+            </div>
+            <div class="spamtainer">
+                <p class="colorTextOrange">+30</p>
+                <p>Years of Experience</p>
+            </div>
+            <div class="spamtainer">
+                <p class="colorTextOrange">+30</p>
+                <p>Years of Experience</p>
+            </div>
+        </div>
+    </div>
+    <div class="rightPartner">
+        <img src="hands-shaking.jpg" alt="hands shaking">
+    </div>
+    </div>
+</div>
+</body>
+<div class="footerItemsComplete"></div>
+<script>
+fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector('header').innerHTML = data;
+
+        // Cambiar el logo apenas se carga el header
+        const imageHeader = document.querySelector('.imageHeader');
+        imageHeader.src = 'logo-BMS-new.png';
+        const navBarEdited = document.querySelector('.nav-bar').classList.add('EditedNavbarWhoware')
+
+    })
+    .catch(error => console.error('Error loading header:', error));
+</script>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 0) {
+      header.classList.add("headerScrolled");
+    } else {
+      header.classList.remove("headerScrolled");
+    }
+  });
+</script>
+
+<script>
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector('.footerItemsComplete').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading header:', error));
+</script>
+
+
+<script>
+  const observerItems = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('animate-in');
+      }
+    });
+  });
+
+  document.querySelectorAll('.howrweItem').forEach(el => observerItems.observe(el));
+</script>
+<script>
+document.querySelectorAll('.spamtainer .colorTextOrange').forEach(span => {
+  const target = parseInt(span.innerText.replace('+', ''));
+  let count = 0;
+
+  const updateCount = () => {
+    const increment = Math.ceil(target / 50);
+    count += increment;
+    if (count < target) {
+      span.innerText = `+${count}`;
+      requestAnimationFrame(updateCount);
+    } else {
+      span.innerText = `+${target}`;
+    }
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        updateCount();
+        observer.unobserve(span);
+      }
+    });
+  });
+
+  observer.observe(span);
+});
+</script>
+
+</html>

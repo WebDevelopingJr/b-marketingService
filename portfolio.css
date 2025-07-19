@@ -1,0 +1,244 @@
+body {
+    margin: 0;
+}
+main {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F97245;
+}
+.textC {
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.textPrrr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+/* Projects */
+.projectsInGeneral {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.projectsInGeneralContainer {
+    width: 90%;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.buttonsFilterProjects {
+    display: flex;
+    gap: 30px;
+}
+.projectBtn {
+    background-image: linear-gradient(#F97245, #ea6438);
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.projectsContainer {
+    width: 100%;
+    max-width: 1800px;
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 50px;
+}
+.projectInfo {
+  width: 440px;
+  display: none;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  box-shadow: 0px 0px 11px 0px #a8a8a8;
+  margin: 13px;
+  border-radius: 20px;
+  background: #fff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projectInfo.show {
+  display: flex;
+  animation: fadeSlideUp 0.5s ease forwards;
+}
+.projectInfo:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(249, 114, 69, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectInfo .descriptionContainerText {
+    padding: 18px;
+}
+.projectInfo img {
+    width: 100%;
+    height: fit-content;
+}
+.tagslol {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+}
+.tagslol span {
+    padding: 6px 15px;
+    background-image: linear-gradient(to right, #F97245, #e29175);
+    color: #fff;
+    border-radius: 10px;
+}
+
+
+
+/* Certifications and type shi */
+.certifications {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+}
+.certifications h1 {
+    margin-bottom: 60px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.certificationContainer {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.certifit {
+    width: 400px;
+    height: 372px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.certifit img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px 2px #a8a8a8;
+}
+
+.textCertifit {
+    width: 100%;
+    position: absolute;
+    left: -280px;
+    top: 0;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    transition: 0.2s linear;
+}
+.textCertifit img {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    padding: 12px;
+}
+.certifit:hover .textCertifit {
+    left: 0;
+    width: 100%;
+    height: 291px;
+    border-radius: 20px;
+    background: #000000c9;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.2s linear;
+}
+
+@media (max-width: 799px) {
+    .certificationContainer {
+    align-items: center;
+    justify-content: center;
+}
+}
+@media (max-width: 630px) {
+    .buttonsFilterProjects {
+        flex-wrap: wrap;
+    }
+    .projectInfo {
+    width: 100%;
+}
+.tagslol {
+    gap: 15px;
+}
+
+}
+@media (max-width: 524px) {
+    .presentationText {
+        width: 90%;
+        font-size: 10px;
+    }
+    .companyPartner img {
+    width: 100%;
+}
+.companyPartner h3 {
+    font-size: 18px;
+}
+
+}
+@media (max-width: 385px) {
+    .tagslol {
+        flex-direction: column;
+    }
+    .certifit {
+    width: 400px;
+    height: 280px;
+    }
+    .certifit:hover .textCertifit {
+    left: 0;
+    width: 100%;
+    height: 234px;
+    }
+}

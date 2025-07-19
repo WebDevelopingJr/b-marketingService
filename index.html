@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>B Marketing Services LLC</title>
+</head>
+<header></header>
+
+<!-- Main -->
+<main>
+    <div class="mainContainer">
+        <h1>We Turn Ideas Into Results</h1>
+        <p>We create bold marketing strategies that drive real business growth.</p>
+    </div>
+</main>
+<body>
+
+    <div class="stickyPosition">
+        <div class="stickyContainerP">
+            <div class="textLeft">
+                <div class="contText">
+                   <h2>WE´RE DIGITAL INNOVATION MARKETING SPECIALISTS</h2>
+                   <p>We focus on achieving results of your business, we work with a clearly defined strategy, adapted to the requirements of each brand, whether as a marketing agency, managing social networks or video advertising.</p>
+                </div>
+                <div class="contText">
+                   <h2>WE´RE DIGITAL INNOVATION MARKETING SPECIALISTS</h2>
+                   <p>We focus on achieving results of your business, we work with a clearly defined strategy, adapted to the requirements of each brand, whether as a marketing agency, managing social networks or video advertising.</p>
+                </div>
+                <div class="contText">
+                   <h2>WE´RE DIGITAL INNOVATION MARKETING SPECIALISTS</h2>
+                   <p>We focus on achieving results of your business, we work with a clearly defined strategy, adapted to the requirements of each brand, whether as a marketing agency, managing social networks or video advertising.</p>
+                </div>
+                <div class="contText">
+                   <h2>WE´RE DIGITAL INNOVATION MARKETING SPECIALISTS</h2>
+                   <p>We focus on achieving results of your business, we work with a clearly defined strategy, adapted to the requirements of each brand, whether as a marketing agency, managing social networks or video advertising.</p>
+                </div>
+                <div class="contText">
+                   <h2>WE´RE DIGITAL INNOVATION MARKETING SPECIALISTS</h2>
+                   <p>We focus on achieving results of your business, we work with a clearly defined strategy, adapted to the requirements of each brand, whether as a marketing agency, managing social networks or video advertising.</p>
+                </div>
+                <div class="contText">
+                   <h2>WE´RE DIGITAL INNOVATION MARKETING SPECIALISTS</h2>
+                   <p>We focus on achieving results of your business, we work with a clearly defined strategy, adapted to the requirements of each brand, whether as a marketing agency, managing social networks or video advertising.</p>
+                </div>
+            </div>
+            <div class="imgRight">
+                <img src="marketingPicture.jpg" alt="MarketingPresentation">
+            </div>
+        </div>
+    </div>
+    <div class="infoPage">
+        <h1>Why Choose Us?</h1>
+        <div class="divInfoPage">
+        <div class="infoPageContainer">
+            <img src="icons-bms/icon-1.svg" alt="icon">
+            <div class="textCc">
+                <h2>Resultados Reales</h2>
+                <p>Creamos estrategias enfocadas en objetivos concretos: más clientes, más ventas, más visibilidad. Nos importan los números tanto como a ti.</p>
+            </div>
+        </div>
+
+        <div class="infoPageContainer">
+            <img src="icons-bms/icon-2.svg" style="background-color: #FFD664" alt="icon">
+            <div class="textCc">
+                <h2>Resultados Reales</h2>
+                <p>Creamos estrategias enfocadas en objetivos concretos: más clientes, más ventas, más visibilidad. Nos importan los números tanto como a ti.</p>
+            </div>
+        </div>
+
+        <div class="infoPageContainer">
+            <img src="icons-bms/icon-3.svg" style="background-color: #F3AAFA" alt="icon">
+            <div class="textCc">
+                <h2>Resultados Reales</h2>
+                <p>Creamos estrategias enfocadas en objetivos concretos: más clientes, más ventas, más visibilidad. Nos importan los números tanto como a ti.</p>
+            </div>
+        </div>
+
+        <div class="infoPageContainer">
+            <img src="icons-bms/icon-4.svg" style="background-color: #75EFF3" alt="icon">
+            <div class="textCc">
+                <h2>Resultados Reales</h2>
+                <p>Creamos estrategias enfocadas en objetivos concretos: más clientes, más ventas, más visibilidad. Nos importan los números tanto como a ti.</p>
+            </div>
+        </div>
+
+        <div class="infoPageContainer">
+            <img src="icons-bms/icon-5.svg" style="background-color: #89EDAC" alt="icon">
+            <div class="textCc">
+                <h2>Resultados Reales</h2>
+                <p>Creamos estrategias enfocadas en objetivos concretos: más clientes, más ventas, más visibilidad. Nos importan los números tanto como a ti.</p>
+            </div>
+        </div>
+
+        <div class="infoPageContainer">
+            <img src="icons-bms/icon-6.svg" style="background-color: #FFD664" alt="icon">
+            <div class="textCc">
+                <h2>Resultados Reales</h2>
+                <p>Creamos estrategias enfocadas en objetivos concretos: más clientes, más ventas, más visibilidad. Nos importan los números tanto como a ti.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+<div class="footerItemsComplete"></div>
+
+
+<script>
+fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.querySelector('header').innerHTML = data;
+
+    // ✅ Esperamos a que el header esté dentro del DOM
+    const menuIcon = document.querySelector('.iconMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuIcon && mobileMenu) {
+      menuIcon.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+      });
+
+      document.querySelectorAll('.mobileMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+        });
+      });
+    }
+  })
+  .catch(error => console.error('Error loading header:', error));
+</script>
+
+
+<script>
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector('.footerItemsComplete').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading header:', error));
+</script>
+
+<script>
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.contentInfoContainer, .textC').forEach(el => {
+    el.classList.add('animate-in');
+    sectionObserver.observe(el);
+  });
+</script>
+
+
+
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 0) {
+      header.classList.add("headerScrolled");
+      document.querySelector('.imageHeader').src = 'logo-BMS-new.png'
+    } else {
+      header.classList.remove("headerScrolled");
+      document.querySelector('.imageHeader').src = 'logo-BMS-bco.png'
+    }
+  });
+</script>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('animate-in');
+      }
+    });
+  });
+
+  document.querySelectorAll('.contText').forEach(el => observer.observe(el));
+
+</script>
+</html>

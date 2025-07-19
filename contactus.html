@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contactus.css">
+    <title>Contact Us</title>
+</head>
+<header></header>
+<main>
+    <div class="textC">
+        <h1>Our Premium Services</h1>
+        <p>Where innovation meets execution. We turn your digital challenges into beautiful, profitable solutions through cutting-edge strategies and flawless implementation.</p>
+    </div>
+</main>
+<body>
+    <div class="contactus">
+        <div class="contactusContainer">
+            <div class="getInTouch">
+                <h1>Get In Touch</h1>
+                <p>We'd love to hear from you. Whether you have a question about our services, need a quote, or want to discuss your next project, our team is here to help.</p>
+                <div class="socialMedias">
+                    <div class="sociallol">
+                        <img src="icons-bms/icon-2.svg" alt="iconSocial">
+                        <div>
+                            <p>Follow Us</p>
+                            <p>@bmarketingservices</p>
+                            <p><a href="#">Linkedin</a> | <a href="#">Twiter</a> | <a href="#">Instagram</a></p>
+                        </div>
+                    </div>
+
+                    <div class="sociallol">
+                        <img src="icons-bms/icon-2.svg" alt="iconSocial">
+                        <div>
+                            <p>Follow Us</p>
+                            <p>@bmarketingservices</p>
+                            <p><a href="#">Linkedin</a> | <a href="#">Twiter</a> | <a href="#">Instagram</a></p>
+                        </div>
+                    </div>
+
+                    <div class="sociallol">
+                        <img src="icons-bms/icon-2.svg" alt="iconSocial">
+                        <div>
+                            <p>Follow Us</p>
+                            <p>@bmarketingservices</p>
+                            <p><a href="#">Linkedin</a> | <a href="#">Twiter</a> | <a href="#">Instagram</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                <div class="contactUsForm">
+                   <div class="form-row">
+                     <div class="form-group">
+                       <label>First Name</label>
+                       <input type="text"  />
+                     </div>
+                     <div class="form-group">
+                       <label>Last Name</label>
+                       <input type="text"  />
+                     </div>
+                   </div>
+               
+                   <div class="form-group">
+                     <label>Email address</label>
+                     <input type="email" />
+                   </div>
+               
+                   <div class="form-group">
+                     <label>Phone Number</label>
+                     <input type="tel"  />
+                   </div>
+               
+                   <div class="form-group">
+                     <label>Subject</label>
+                     <select>
+                       <option selected disabled>Select a subject</option>
+                       <option>General Inquiry</option>
+                       <option>Support</option>
+                       <option>Feedback</option>
+                     </select>
+                   </div>
+               
+                   <div class="form-group">
+                     <textarea placeholder="Tell us about your project or inquiry..."></textarea>
+                   </div>
+               
+                   <button class="btn-submit">Send Message</button>
+                 </div>
+                       </div>
+                   </div>
+    <div class="frequentlyQuestions">
+        <div class="frequentlyQuesContainer">
+          <h1>Frequently Asked Questions </h1>
+          <div class="contenedorQuestions">
+            <div class="question">
+              <div>
+                <h3>What are the business hours</h3>
+                <img src="icons-bms/moreIcon.svg" alt="open for see more">
+              </div>
+              <div class="answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo qui odio distinctio soluta iste amet nulla quisquam alias possimus quae, perspiciatis error excepturi recusandae, explicabo consequatur, repellendus labore temporibus fugiat?</p>
+              </div>
+            </div>
+
+            <div class="question">
+              <div>
+                <h3>What are the business hours</h3>
+                <img src="icons-bms/moreIcon.svg" alt="open for see more">
+              </div>
+              <div class="answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo qui odio distinctio soluta iste amet nulla quisquam alias possimus quae, perspiciatis error excepturi recusandae, explicabo consequatur, repellendus labore temporibus fugiat?</p>
+              </div>
+            </div>
+
+            <div class="question">
+              <div>
+                <h3>What are the business hours</h3>
+                <img src="icons-bms/moreIcon.svg" alt="open for see more">
+              </div>
+              <div class="answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo qui odio distinctio soluta iste amet nulla quisquam alias possimus quae, perspiciatis error excepturi recusandae, explicabo consequatur, repellendus labore temporibus fugiat?</p>
+              </div>
+            </div>
+
+            <div class="question">
+              <div>
+                <h3>What are the business hours</h3>
+                <img src="icons-bms/moreIcon.svg" alt="open for see more">
+              </div>
+              <div class="answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo qui odio distinctio soluta iste amet nulla quisquam alias possimus quae, perspiciatis error excepturi recusandae, explicabo consequatur, repellendus labore temporibus fugiat?</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </div>
+</body>
+<div class="footerItemsComplete"></div>
+
+<script>
+    fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector('header').innerHTML = data
+    })
+</script>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 0) {
+      header.classList.add("headerScrolled");
+      document.querySelector('.imageHeader').src = 'logo-BMS-new.png'
+    } else {
+      header.classList.remove("headerScrolled");
+      document.querySelector('.imageHeader').src = 'logo-BMS-bco.png'
+    }
+  });
+</script>
+
+<script>
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector('.footerItemsComplete').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading header:', error));
+</script>
+
+<script>
+
+  const btn = document.querySelector('.btn-submit');
+
+btn.addEventListener('click', function (e) {
+  const circle = document.createElement('span');
+  circle.classList.add('ripple');
+
+  const rect = btn.getBoundingClientRect();
+  circle.style.left = e.clientX - rect.left + 'px';
+  circle.style.top = e.clientY - rect.top + 'px';
+
+  btn.appendChild(circle);
+
+  circle.addEventListener('animationend', () => {
+    circle.remove();
+  });
+});
+
+
+function showOnScroll() {
+  const container = document.querySelector('.contactusContainer');
+  const top = container.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (top < windowHeight - 100) {
+    container.classList.add('visible');
+  }
+}
+
+window.addEventListener('scroll', showOnScroll);
+window.addEventListener('load', showOnScroll);
+
+</script>
+</html>

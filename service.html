@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="service.css">
+    <title>Document</title>
+</head>
+<header></header>
+<main>
+    <div class="textC">
+        <h1>Our Premium Services</h1>
+        <p>Where innovation meets execution. We turn your digital challenges into beautiful, profitable solutions through cutting-edge strategies and flawless implementation.</p>
+    </div>
+</main>
+<body>
+    <div class="services">
+    <div class="presentationText">
+        <h1>Comprehensive Digital Solutions</h1>
+        <p>From concept to execution, we deliver results that exceed expectations and drive measurable growth for your business.</p>
+    </div>
+    <div class="servicesContainer">
+        <div class="serviceItem">
+            <div>
+                <img src="icons-bms/icon-2.svg" alt="iconSample">
+                <p>Social Media Marketing</p>
+            </div>
+            <p>Transform your social presence into a powerful growth engine. We create engaging content strategies that build authentic connections and drive conversions across all platforms.</p>
+            <ul>
+                <li>Strategic content planning & creation</li>
+                <li>Community management & engagement</li>
+                <li>Paid social advertising campaigns</li>
+                <li>Analytics & performance optimization</li>
+            </ul>
+            <a href="internPages/socialMedia.html"><button>Learn More</button></a>
+        </div>
+
+        <div class="serviceItem">
+            <div>
+                <img src="icons-bms/icon-2.svg" alt="iconSample">
+                <p>Social Media Marketing</p>
+            </div>
+            <p>Transform your social presence into a powerful growth engine. We create engaging content strategies that build authentic connections and drive conversions across all platforms.</p>
+            <ul>
+                <li>Strategic content planning & creation</li>
+                <li>Community management & engagement</li>
+                <li>Paid social advertising campaigns</li>
+                <li>Analytics & performance optimization</li>
+            </ul>
+            <a href="internPages/socialMedia.html"><button>Learn More</button></a>
+        </div>
+
+        <div class="serviceItem">
+            <div>
+                <img src="icons-bms/icon-2.svg" alt="iconSample">
+                <p>Social Media Marketing</p>
+            </div>
+            <p>Transform your social presence into a powerful growth engine. We create engaging content strategies that build authentic connections and drive conversions across all platforms.</p>
+            <ul>
+                <li>Strategic content planning & creation</li>
+                <li>Community management & engagement</li>
+                <li>Paid social advertising campaigns</li>
+                <li>Analytics & performance optimization</li>
+            </ul>
+            <a href="internPages/socialMedia.html"><button>Learn More</button></a>
+        </div>
+
+        <div class="serviceItem">
+            <div>
+                <img src="icons-bms/icon-2.svg" alt="iconSample">
+                <p>Social Media Marketing</p>
+            </div>
+            <p>Transform your social presence into a powerful growth engine. We create engaging content strategies that build authentic connections and drive conversions across all platforms.</p>
+            <ul>
+                <li>Strategic content planning & creation</li>
+                <li>Community management & engagement</li>
+                <li>Paid social advertising campaigns</li>
+                <li>Analytics & performance optimization</li>
+            </ul>
+            <a href="internPages/socialMedia.html"><button>Learn More</button></a>
+        </div>
+
+        <div class="serviceItem">
+            <div>
+                <img src="icons-bms/icon-2.svg" alt="iconSample">
+                <p>Social Media Marketing</p>
+            </div>
+            <p>Transform your social presence into a powerful growth engine. We create engaging content strategies that build authentic connections and drive conversions across all platforms.</p>
+            <ul>
+                <li>Strategic content planning & creation</li>
+                <li>Community management & engagement</li>
+                <li>Paid social advertising campaigns</li>
+                <li>Analytics & performance optimization</li>
+            </ul>
+            <a href="internPages/socialMedia.html"><button>Learn More</button></a>
+        </div>
+
+        <div class="serviceItem">
+            <div>
+                <img src="icons-bms/icon-2.svg" alt="iconSample">
+                <p>Social Media Marketing</p>
+            </div>
+            <p>Transform your social presence into a powerful growth engine. We create engaging content strategies that build authentic connections and drive conversions across all platforms.</p>
+            <ul>
+                <li>Strategic content planning & creation</li>
+                <li>Community management & engagement</li>
+                <li>Paid social advertising campaigns</li>
+                <li>Analytics & performance optimization</li>
+            </ul>
+            <a href="internPages/socialMedia.html"><button>Learn More</button></a>
+        </div>
+    </div>
+    <div class="partners">
+        <h1>Partners</h1>
+        <div class="partnersContainerS">
+            <div class="companyPartner">
+                <img src="https://webbusmarketing.com/Tools/Home/log-new-wb.png" alt="webbusmarketing" style="filter: brightness(10.5);">
+                <h3>Webbus Marketing LLC</h3>
+                <ul>
+                    <li>Graphic Design</li>
+                    <li>Web Design</li>
+                </ul>
+            </div>
+
+            <div class="companyPartner codebynesCompany">
+                <img src="https://codebynes.com/assets/log-cbn02-CjTdYvjt.png" alt="webbusmarketing">
+                <h3>Codebynes</h3>
+                <ul>
+                    <li>Modern Websites</li>
+                    <li>React Systems Websites</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</body>
+<div class="footerItemsComplete"></div>
+<script>
+fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector('header').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading header:', error));
+
+</script>
+
+
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 0) {
+      header.classList.add("headerScrolled");
+      document.querySelector('.imageHeader').src = 'logo-BMS-new.png'
+    } else {
+      header.classList.remove("headerScrolled");
+      document.querySelector('.imageHeader').src = 'logo-BMS-bco.png'
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 0) {
+      header.classList.add("headerScrolled");
+      document.querySelector('.imageHeader').src = 'logo-BMS-new.png'
+    } else {
+      header.classList.remove("headerScrolled");
+      document.querySelector('.imageHeader').src = 'logo-BMS-bco.png'
+    }
+  });
+</script>
+
+<script>
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector('.footerItemsComplete').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading header:', error));
+</script>
+
+<script>
+  const observerServices = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observerServices.unobserve(entry.target);
+      }
+    });
+  });
+
+  document.querySelectorAll('.serviceItem').forEach(el => observerServices.observe(el));
+</script>
+
+</html>
